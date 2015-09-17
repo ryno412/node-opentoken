@@ -5,6 +5,8 @@ var yesterday = new Date(Date.now() - (24 * 3600 * 1000));
 var tomorrow  = new Date(Date.now() + (24 * 3600 * 1000));
 var testPassword = "testPassword";
 var cipherId = 2;
+var OpenTokenAPI = require('../opentoken.js').OpenTokenAPI;
+var otkapi = new OpenTokenAPI(cipherId, testPassword);
 
 // Test decode (token generated from 3rd party OpenToken lib)
 !(function () {
